@@ -55,17 +55,3 @@ function update_quality(items)
     end
   end
 end
-
---for i, item in ipairs(items) do
---  print(item.name)
---  print(item.sell_in)
---  print(item.quality)
---end
-
---update_quality()
-
---for i, item in ipairs(items) do
---  print(item.name)
---  print(item.sell_in)
---  print(item.quality)
---end
