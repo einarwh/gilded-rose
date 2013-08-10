@@ -10,37 +10,37 @@ end
 
 function update_quality(items)
   for i=1,#items do
-    if (items[i].name ~= 'aged brie' and items[i].name ~= 'backstage passes to TAFKAL80ETC concert') then
-      if (items[i].quality > 0) then
-        if (items[i].name ~= 'sulfuras, hand of ragnaros') then
+    if items[i].name ~= 'aged brie' and items[i].name ~= 'backstage passes to TAFKAL80ETC concert' then
+      if items[i].quality > 0 then
+        if items[i].name ~= 'sulfuras, hand of ragnaros' then
           items[i].quality = items[i].quality - 1
         end
       end
     else
-      if (items[i].quality < 50) then
+      if items[i].quality < 50 then
         items[i].quality = items[i].quality + 1
-        if (items[i].name == 'backstage passes to TAFKAL80ETC concert') then
-          if (items[i].sell_in < 11) then
-            if (items[i].quality < 50) then
+        if items[i].name == 'backstage passes to TAFKAL80ETC concert' then
+          if items[i].sell_in < 11 then
+            if items[i].quality < 50 then
               items[i].quality = items[i].quality + 1
             end
           end
-          if (items[i].sell_in < 6) then
-            if (items[i].quality < 50) then
+          if items[i].sell_in < 6 then
+            if items[i].quality < 50 then
               items[i].quality = items[i].quality + 1
             end     
           end   
         end
       end
     end
-    if (items[i].name ~= 'sulfuras, hand of ragnaros') then
+    if items[i].name ~= 'sulfuras, hand of ragnaros' then
       items[i].sell_in = items[i].sell_in - 1
     end
-    if (items[i].sell_in < 0) then
-      if (items[i].name ~= 'aged brie') then
-        if (items[i].name ~= 'backstage passes to TAFKAL80ETC concert') then
-          if (items[i].quality > 0) then
-            if (items[i].name ~= 'sulfuras, hand of ragnaros') then
+    if items[i].sell_in < 0 then
+      if items[i].name ~= 'aged brie' then
+        if items[i].name ~= 'backstage passes to TAFKAL80ETC concert' then
+          if items[i].quality > 0 then
+            if items[i].name ~= 'sulfuras, hand of ragnaros' then
               items[i].quality = items[i].quality - 1
             end
           end
@@ -48,7 +48,7 @@ function update_quality(items)
           items[i].quality = items[i].quality - items[i].quality
         end
       else
-        if (items[i].quality < 50) then
+        if items[i].quality < 50 then
           items[i].quality = items[i].quality + 1
         end
       end 
